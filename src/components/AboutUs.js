@@ -2,9 +2,9 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <footer>
+    <div>
       AboutUs
-    </footer>
+    </div>
   );
 }
 

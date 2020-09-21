@@ -4,10 +4,17 @@ import './styles/Footer.css';
 const Footer = () => {
   return (
     <footer className="foot">
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-facebook-messenger"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fas fa-phone"></i>
+      <div className="section">
+        <i className="fab fa-facebook-square"></i>
+        <i className="fab fa-facebook-messenger"></i>
+      </div>
+      <div className="section">
+        <i className="fab fa-instagram"></i>
+      </div>
+      <div className="section">
+        <i className="fab fa-instagram"></i>
+        <i className="fas fa-phone"></i>
+      </div>
     </footer>
   );
 }

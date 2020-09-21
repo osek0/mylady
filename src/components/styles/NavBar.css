@@ -20,11 +20,10 @@
 
 .icon {
   width: 4rem;
-  text-align: center;
-}
-
-.nav-link:nth-child(1) {
-  padding-top: 1rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-item i {
@@ -37,7 +36,7 @@
   color: rgb(236, 233, 231);
 }
 
-.nav-link:last-child {
+.nav-item:last-child {
   margin-top: auto;
 }
 
@@ -45,13 +44,11 @@
   display: none;
   font-size: 1.5rem;
   margin-left: 1.5rem;
-  margin-top: 0.2rem;
 }
-
-
 
 .nav-link:hover {
   color: rgb(255, 0, 98);
+  background-color: rgba(0, 0, 0, 0.356);
   transition: color 0.2s ease;
 }
 
@@ -70,12 +67,13 @@
     bottom: 0;
   }
 
-  .icon {
-    height: 4rem;
+  .nav-link {
+    height: 100%;
   }
 }
 
 @media only screen and (min-width: 600px) {
+    
   .navbar {
     top: 0;
     height: 100vh;
@@ -85,13 +83,25 @@
   .navbar:hover {
     width: 14rem;
   }
-  
-  .navbar:hover .nav-item {
+
+  .navbar:hover .nav-link {
     display: flex;
     flex-direction: row;
+  }
+
+  .navbar:hover .icon {
+    margin-left: 10px;
   }
   
   .navbar:hover .link-text {
     display: block;
   }
+
+  .content {
+    margin-left: 4rem;
+  }
+
+  .foot {
+    margin-left: 4rem;
+  } 
 }
