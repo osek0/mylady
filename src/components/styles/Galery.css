@@ -52,7 +52,7 @@
   align-items: center;
 }
 
-.contact-links p {
+.title {
   color: white;
   font-size: 23px;
 }
@@ -80,6 +80,16 @@
 
 .photo-card:hover .contact-links {
   height: 100%;
+}
+
+.fb-link {
+  color: white;
+  font-size: 18px !important;
+}
+
+.fb-link a {
+  text-decoration: none;
+  color: rgb(212, 181, 136);
 }
 
 @media only screen and (max-width: 600px) {

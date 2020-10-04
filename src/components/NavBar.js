@@ -1,58 +1,17 @@
 import React from 'react';
+import {NavItem} from './NavItem';
 import './styles/NavBar.css';
 
 const NavBar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-nav">
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            <div className="icon">
-              <i className="fas fa-home"></i>
-            </div>
-            <p className="link-text">Start</p>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link"> 
-            <div className="icon">
-            <i className="fas fa-users"></i>
-            </div>
-            <p className="link-text">O nas</p>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            <div className="icon">
-              <i className="fas fa-camera"></i>
-            </div>
-            <p className="link-text">Galeria</p>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            <div className="icon">
-              <i className="fas fa-address-card"></i>
-            </div>
-            <p className="link-text">Kontakt</p>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            <div className="icon">
-              <i className="fas fa-hand-holding-usd"></i>
-            </div>
-            <p className="link-text">Płatności</p>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            <div className="icon">
-              <i className="fas fa-question-circle"></i>
-            </div>
-            <p className="link-text">FAQ</p>
-          </a>
-        </li>
+        <NavItem title="Start" icon="fas fa-home" link="#" />
+        <NavItem title="O nas" icon="fas fa-users" link="#" />
+        <NavItem title="Galeria" icon="fas fa-camera" link="#" />
+        <NavItem title="Kontakt" icon="fas fa-address-card" link="#" />
+        <NavItem title="Płatności" icon="fas fa-hand-holding-usd" link="#" />
+        <NavItem title="FAQ" icon="fas fa-question-circle" link="#" />
       </ul>
     </nav>
   );

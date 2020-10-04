@@ -1,5 +1,6 @@
 import React from 'react';
 import { getFeed, getUrl } from './API/facebook';
+import { PhotoCard } from './PhotoCard';
 import './styles/Galery.css';
 
 class Galery extends React.Component {
@@ -123,28 +124,8 @@ class Galery extends React.Component {
 
   loadPhotos = () => {
     return this.state.photos.map( photo => {
-      return (<div className="photo-card">
-        <div className="photo">
-          <img className="photos-item" src={photo.url} /> 
-          <div className="contact-links">
-            <p>Zapytaj o produkt</p>
-            <a href="#">
-              <div id="mail" className="contact-link-item">
-                <i class="far fa-envelope"></i>
-              </div>
-            </a>
-            <a href="#">
-              <div id="messenger" className="contact-link-item">
-                <i class="fab fa-facebook-messenger" aria-hidden="true"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="description">
-          {photo.description}
-        </div>
-      </div>);
-  });
+      return <PhotoCard url={photo.url} description={photo.description} />;
+    });
   }
 
   render() {
