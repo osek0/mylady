@@ -18,6 +18,13 @@
   grid-column: 1 / span 3;
 }
 
+.fact:nth-child(2) {
+  background-image: url("./photos/babyblue6.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+
 .about-photo {
   margin: 10vh 5vw;
 }
