@@ -33,3 +33,14 @@
   font-size: 50px;
   font-family: 'Sansita Swashed', cursive;
 }
+
+@media only screen and (max-width: 750px) {
+  .fact {
+    display: block;
+  }
+
+  .about-photo {
+    margin: 10vh 2vw;
+    width: 96vw;
+  }
+}
