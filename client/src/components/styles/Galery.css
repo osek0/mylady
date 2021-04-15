@@ -30,6 +30,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  width: auto;
+  height: 110%;
 }
 
 .description {

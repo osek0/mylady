@@ -1,5 +1,5 @@
 import React from 'react';
-import { getFeed, getUrl } from './API/facebook';
+import { getFeed, getPost } from './API/instagram';
 import { PhotoCard } from './PhotoCard';
 import './styles/Galery.css';
 
@@ -112,14 +112,18 @@ class Galery extends React.Component {
 
   handleClick = async () => {
     const feed = await getFeed();
-    const photos = feed.map(async (post) => await getUrl(post.id));
-    
-    await Promise.all(photos)
-    .then(urls => {
-      this.setState({photos: urls});
+    const photos = feed.map(async (post) => {
+      const postData = await getPost(post.id)
+      return ({
+        "url": postData.media_url,
+        "description": postData.caption 
+      });
     });
     
-    console.log(this.state.photos);
+    await Promise.all(photos)
+    .then(posts => {
+      this.setState({photos: posts});
+    });
   }
 
   loadPhotos = () => {
