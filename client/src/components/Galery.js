@@ -115,8 +115,9 @@ class Galery extends React.Component {
     const photos = feed.map(async (post) => {
       const postData = await getPost(post.id)
       return ({
+        "postID": postData.id,
         "url": postData.media_url,
-        "description": postData.caption 
+        "description": postData.caption
       });
     });
     
@@ -124,11 +125,13 @@ class Galery extends React.Component {
     .then(posts => {
       this.setState({photos: posts});
     });
+
+    console.log(this.state.photos);
   }
 
   loadPhotos = () => {
     return this.state.photos.map( photo => {
-      return <PhotoCard url={photo.url} description={photo.description} />;
+      return <PhotoCard postID={photo.postID} url={photo.url} description={photo.description} />;
     });
   }
 
