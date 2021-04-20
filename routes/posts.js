@@ -30,6 +30,7 @@ async function getDataFromPosts() {
 
   const photos = feed.map(async (post) => {
     const postData = await getPost(post.id)
+
     return ({
       "postID": postData.id,
       "url": postData.media_url,
@@ -45,9 +46,15 @@ async function getDataFromPosts() {
   return photosData;
 }
 
+let postDetails = [];
+
+setInterval(async () => {
+  postDetails = await getDataFromPosts();
+},900000);
+
 router.get('/', async (req, res) => {
 
-  const postsData = await getDataFromPosts();
+  const postsData = postDetails;
 
   console.log(postsData);
 
